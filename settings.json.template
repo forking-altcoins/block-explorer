@@ -1,0 +1,222 @@
+/*
+  This file must be valid JSON. But comments are allowed
+
+  Please edit settings.json, not settings.json.template
+*/
+{
+  // name your instance!
+  "title": "Coin4Trade block explorer",
+
+  "address": "127.0.0.1:80",
+
+  // coin name
+  "coin": "Coin4Trade",
+
+  // coin symbol
+  "symbol": "C4T",
+
+  // coin type
+  //  Options:
+  //    bitcoin = Default Bitcoin/Dash/... clones
+  //    ripple = Ripple clones
+  "baseType": "pivx",
+
+  // The epoch time for a ripple based coin.
+  // You can ignore this setting if you're not using a ripple based coin.
+  "rippleEpoch": 0,
+
+  // logo
+  "logo": "/images/logo.png",
+
+  // favicon
+  "favicon": "public/favicon.ico",
+
+  // Uses bootswatch themes (http://bootswatch.com/)
+  // Valid options:
+  //     Cerulean, Cosmo, Cyborg, Darkly, Flatly, Journal, Lumen, Paper,
+  //     Readable, Sandstone, Simplex, Slate, Spacelab, Superhero, United, Yeti
+  // theme (see /public/themes for available themes)
+  "theme": "Cosmo",
+
+  // port to listen for requests on.
+  "port" : 80,
+
+  // database settings (MongoDB)
+  "dbsettings": {
+    "user": "C4TDev",
+    "password": "C4TPass",
+    "database": "explorerdb",
+    "address": "localhost",
+    "port": 27017
+  },
+
+  //update script settings
+  "update_timeout": 10,
+  "check_timeout": 250,
+
+  // wallet settings
+  "wallet": {
+    "host": "localhost",
+    "port": 19666,
+    "user": "rpcuser123",
+    "pass": "rpcpassword123"
+  },
+
+  // confirmations
+  "confirmations": 100,
+
+  // language settings
+  "locale": "locale/en.json",
+
+  // menu settings
+  "display": {
+    "api": true,
+    "markets": false,
+    "richlist": true,
+    "twitter": false,
+    "discordapp": false,
+    "bitcointalk": false,
+    "website": true,
+    "github": true,
+    "facebook": false,
+    "googleplus": false,
+    "search": true,
+    "movement": false,
+    "network": false,
+    "masternodes": true,
+    "coininfo": true,
+    "coinmarketcap": false
+  },
+
+  // index page (valid options for difficulty are POW, POS or Hybrid)
+  "index": {
+    "show_hashrate": true,
+    "show_coin_supply": true,
+    "difficulty": "POS",
+    "last_txs": 100
+  },
+
+  // ensure links on API page are valid
+  "api": {
+    "blockindex": 0,
+    "blockhash": "00000d9376560fa37700a9b8a8b596b2d11236c90cc223cbeae2465c31710298",
+    "txhash": "f7c16f63f14902ecf0a28587c3eb878fe6a2333ab7a4f4a695edc709289838a9",
+    "address": "CWb3Z2hkfY8yBuj7UZ2MSGGqFkdCisTYN2"
+  },
+
+  // market settings
+  //supported markets: crex, bittrex, poloniex, yobit, empoex, bleutrade, cryptopia, ccex
+  //default market is loaded by default and determines last price in header
+  "markets": {
+    "coin": "C4T",
+    "exchange": "BTC",
+    "enabled": ["crex"],
+    "crex_id": "C4T-BTC",
+    "crex_key" : "C4T-BTC",
+    "default": "crex"
+  },
+
+  // richlist/top100 settings
+  "richlist": {
+    "distribution": true,
+    "received": true,
+    "balance": true,
+    "coin_supply": true
+  },
+  // movement page settings
+  // min amount: show transactions greater than this value
+  // low flag: greater than this value flagged yellow
+  // high flag: greater than this value flagged red
+  "movement": {
+    "min_amount": 100,
+    "low_flag": 1000,
+    "high_flag": 5000
+  },
+
+  // Masternodes page
+  // default port: Default port a masternode is running. 
+  "masternodes": {
+    "default_port": 19333,
+
+    // Use index-based values (starting with 0).
+    // 0 is the key of the masterlist data.
+    // -1 means that the info is not available.
+    "list_format": {
+      "address": 3,
+      "status": 1,
+      "lastseen": 5,
+      "lastpaid": -1,
+      "ip": 0
+    }
+  },
+
+
+  // Coin info page
+  "coininfo": {
+    "basic_info_links": [
+      ["Website", "http://coin4trade.org/"],
+      [""],
+      ["Discord", "https://discord.gg/"],
+      [""],
+      ["Wallets", "https://github.com/Coin4Trade/Coin4Trade/releases"],
+      [""],
+      ["Crex24", "https://crex24.com/ru/exchange/C4T-BTC"]
+    ],
+    "masternode_required": 1000,
+    "block_time_sec": 60,
+    "block_reward_mn": 0.001
+  },
+
+  // CoinMarketCap integration
+  "coinmarketcap": {
+    "ticker": "C4T"
+  },
+
+  // twitter, facebook, googleplus
+  "twitter": "explorerztop",
+  "facebook": "yourfacebookpage",
+  "googleplus": "yourgooglepluspage",
+
+  //genesis
+  "genesis_tx": "f7c16f63f14902ecf0a28587c3eb878fe6a2333ab7a4f4a695edc709289838a9",
+  "genesis_block": "CWb3Z2hkfY8yBuj7UZ2MSGGqFkdCisTYN2",
+
+  // Fetch blocks from <index>
+  "fetch_blocks_from": 0,
+
+  //heavy (enable/disable additional heavy features)
+  "heavy": false,
+
+  //amount of txs to index per address (stores latest n txs)
+  "txcount": 100,
+
+  //show total sent & received on address page (set false if PoS)
+  "show_sent_received": false,
+
+  // how to calculate current coin supply
+  // COINBASE : total sent from coinbase (PoW)
+  // GETINFO : retreive from getinfo api call (PoS)
+  // HEAVY: retreive from heavys getsupply api call
+  // BALANCES : total of all address balances
+  // TXOUTSET : retreive from gettxoutsetinfo api call
+  "supply": "GETINFO",
+
+  // how to acquire network hashrate
+  // getnetworkhashps: uses getnetworkhashps api call, returns in GH/s
+  // netmhashps: uses getmininginfo.netmhashpsm returns in MH/s
+  "nethash": "getnetworkhashps",
+
+  // nethash unitd: sets nethash API return units
+  // valid options: "P" (PH/s), "T" (TH/s), "G" (GH/s), "M" (MH/s), "K" (KH/s)
+  "nethash_units": "G",
+
+  // Address labels
+  // example : "CRfUhoESPNfQnHDveQX875kLpFp1ih3TXc": {"label": "This is a burn address", "type":"danger", "url":"https://github.com/"}
+  // label (required) = test to display
+  // type (optional) = class of label, valid types: default, primary, warning, danger, success
+  // url (optional) = url to link to for more information
+  "labels": {
+  //  "CRfUhoESPNfQnHDveQX875kLpFp1ih3TXc": {"label": "Developers address", "type":"primary", "url":"https://github.com/"},
+  //  "CRfUhoESPNfQnHDveQX875kLpFp1ih3TXc": {"label": "Cryptsy"}
+  }
+}
