@@ -1,1 +1,1 @@
-Coin4Trade block explorer http://95.179.148.213/
+Coin4Trade block explorer http://explorer.coin4trade.org/
