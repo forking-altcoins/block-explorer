@@ -7,7 +7,7 @@
   // name your instance!
   "title": "Coin4Trade block explorer",
 
-  "address": "127.0.0.1:80",
+  "address": "explorer-coin4trade.ml",
 
   // coin name
   "coin": "Coin4Trade",
@@ -39,7 +39,7 @@
   "theme": "Cyborg",
 
   // port to listen for requests on.
-  "port" : 80,
+  "port" : 3001,
 
   // database settings (MongoDB)
   "dbsettings": {
@@ -76,16 +76,16 @@
     "twitter": false,
     "discordapp": false,
     "bitcointalk": false,
-    "website": true,
-    "github": true,
+    "website": false,
+    "github": false,
     "facebook": false,
     "googleplus": false,
     "search": true,
-    "movement": false,
+    "movement": true,
     "network": false,
     "masternodes": true,
     "coininfo": true,
-    "coinmarketcap": false
+    "coinmarketcap": true
   },
 
   // index page (valid options for difficulty are POW, POS or Hybrid)
@@ -99,9 +99,9 @@
   // ensure links on API page are valid
   "api": {
     "blockindex": 0,
-    "blockhash": "00000d9376560fa37700a9b8a8b596b2d11236c90cc223cbeae2465c31710298",
-    "txhash": "f7c16f63f14902ecf0a28587c3eb878fe6a2333ab7a4f4a695edc709289838a9",
-    "address": "CWb3Z2hkfY8yBuj7UZ2MSGGqFkdCisTYN2"
+    "blockhash": "00000a596b0337e27b7b37d2af9dd0a07110bfb5d9a7844b808cedb0ae5126b3",
+    "txhash": "ff377c6795f79286cfd4ce6a8e66eef8308028d032547b2e1307d1f2975de590",
+    "address": "CYCGonmPTSgb5DczHbfy5rQ4rtBJwkJ1Mx"
   },
 
   // market settings
@@ -154,17 +154,13 @@
   // Coin info page
   "coininfo": {
     "basic_info_links": [
-      ["Website", "http://coin4trade.org/"],
+      ["Website", "https://wallet-coin4trade.ml/"],
       [""],
-      ["Discord", "https://discord.gg/"],
-      [""],
-      ["Wallets", "https://github.com/Coin4Trade/Coin4Trade/releases"],
-      [""],
-      ["Crex24", "https://crex24.com/ru/exchange/C4T-BTC"]
+      ["Buy C4T coin", "https://graviex.net/markets/c4tbtc"]
     ],
     "masternode_required": 1000,
     "block_time_sec": 60,
-    "block_reward_mn": 0.001
+    "block_reward_mn": 0.1
   },
 
   // CoinMarketCap integration
@@ -178,8 +174,8 @@
   "googleplus": "yourgooglepluspage",
 
   //genesis
-  "genesis_tx": "f7c16f63f14902ecf0a28587c3eb878fe6a2333ab7a4f4a695edc709289838a9",
-  "genesis_block": "CWb3Z2hkfY8yBuj7UZ2MSGGqFkdCisTYN2",
+  "genesis_tx": "b81d2c30e2b0e7f2c5ce897498f529d824a68360cbd2d3cd385f00e1ecd505cb",
+  "genesis_block": "00000c336f469de0790c0839b973dcc3a44bf29d48d62fd338b447ceeecfb428",
 
   // Fetch blocks from <index>
   "fetch_blocks_from": 0,
