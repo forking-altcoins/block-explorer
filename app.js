@@ -31,7 +31,7 @@ if (settings.heavy != true) {
     'gettxoutsetinfo',
     'getmasternodecount',
     'getmasternodecountonline',
-    'masternode',
+    'listmasternodes',
     'masternodelist',
   ]);
 } else {
